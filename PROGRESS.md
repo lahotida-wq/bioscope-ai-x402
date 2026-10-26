@@ -9,4 +9,4 @@
 - [x] Frontend: React, Vite, Tailwind, cinematic bioscope theme, cards, playground, receipts
 - [x] Integration check (`npm run check` passes 100%)
 - [x] Complete documentation (README.md, Mermaid diagrams, env guide, Dockerfile, vercel.json)
-- [ ] Verify GitHub authentication and push
+- [x] Pushed to public GitHub repo: https://github.com/lahotida-wq/bioscope-ai-x402
