@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: bioscope-ai-server
+    env: node
+    plan: free
+    region: oregon
+    rootDir: server
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: PAYMENT_MODE
+        value: testnet
+      - key: PAYMENT_RECIPIENT_ADDRESS
+        sync: false
+      - key: X402_FACILITATOR_URL
+        value: https://x402.org/facilitator
+      - key: X402_NETWORK
+        value: eip155:84532
+      - key: X402_ASSET_ADDRESS
+        value: "0x036CbD53842c5426634e7929541eC2318f3dCF7e"
+      - key: PRICE_CITY_BIOSCOPE
+        value: "$0.001"
+      - key: PRICE_EXPLAIN_BIOSCOPE
+        value: "$0.002"
+      - key: PRICE_DEVELOPER_BIOSCOPE
+        value: "$0.001"
+      - key: CORS_ORIGIN
+        sync: false
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 60000
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: 100

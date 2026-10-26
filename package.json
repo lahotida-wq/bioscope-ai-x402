@@ -1,0 +1,31 @@
+{
+  "name": "bioscope-ai-x402-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bioscope AI — Pay Per Insight (x402 Hackathon)",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build:server": "npm run build --workspace=server",
+    "build:client": "npm run build --workspace=client",
+    "build": "npm run build:server && npm run build:client",
+    "lint:server": "npm run lint --workspace=server",
+    "lint:client": "npm run lint --workspace=client",
+    "lint": "npm run lint:server && npm run lint:client",
+    "typecheck:server": "npm run typecheck --workspace=server",
+    "typecheck:client": "npm run typecheck --workspace=client",
+    "typecheck": "npm run typecheck:server && npm run typecheck:client",
+    "test:server": "npm run test --workspace=server",
+    "test": "npm run test:server",
+    "test:live": "npm run test:live --workspace=server",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
