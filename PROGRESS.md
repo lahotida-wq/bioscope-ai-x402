@@ -7,7 +7,7 @@
 - [x] Security: helmet, CORS, rate-limit, 415 content-type, 50kb body limit, safe errors
 - [x] CLI pay-client (examples/pay-client.ts) with 402 challenge & retry
 - [x] 17 passing server tests + live testnet harness
-- [ ] Implement client frontend (dark cinematic bioscope look, cards, playground, receipts)
-- [ ] Integration check (`npm run check`)
+- [x] Frontend implementation: React, Vite, Tailwind, cinematic bioscope theme, cards, playground, receipts
+- [x] Integration check (`npm run check` passes completely)
 - [ ] Complete documentation (Mermaid diagrams, env guide, submission checklist)
 - [ ] GitHub repository push
